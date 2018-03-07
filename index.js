@@ -14,7 +14,7 @@ if (argv._[0] == 'b' || argv._[0] == 'branch') {
   goToBranch()
 }
 
-if (argv._[0] == 'p' || argv._[0] == 'pull') {
+if (argv._[0] == 'p' || argv._[0] == 'pull' || argv._[0] == 'pr') {
   newPR()
 }
 
@@ -24,6 +24,23 @@ if (argv._[0] == 'op' || argv._[0] == 'open-pulls') {
 
 if (argv._[0] == 'j' || argv._[0] == 'jira') {
   goToJira()
+}
+
+if (argv._[0] == 'h' || argv._[0] == 'help' || argv.h || argv.help || argv._.length == 0) {
+  showHelp()
+}
+
+function showHelp(){
+  console.log("dopen help:")
+  console.log("usage: dopen <argument>")
+  console.log("")
+  console.log("r  | repo        Opens the proejct's repo page")
+  console.log("b  | branch      Opens the proejct to the current branch")
+  console.log("p  | pull | pr   Opens the new pr dialogue for the current branch")
+  console.log("op | open-pulls Opens to the page where you can view all open PRs for the current repo")
+  console.log("j  | jira        Opens to the jira ticket associated with the branch (branch name must include the jira ticket in it somewhere)")
+  console.log("h  | help        Opens the help dialogue")
+  console.log("")
 }
 
 function goToJira() {
