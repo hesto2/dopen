@@ -1,6 +1,6 @@
 {
   "name": "dopen",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Command line tool that lets you quickly open up to sites associated with dev workflows (Jira tickets, github repos, and branches)",
   "main": "index.js",
   "scripts": {
