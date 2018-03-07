@@ -29,7 +29,7 @@ if (argv._[0] == 'j' || argv._[0] == 'jira') {
 function goToJira() {
   getBranch()
     .then(branch => {
-      let url = `${jiraUrl}/browse/${branch}`
+      let url = `${jiraUrl}/browse/${parseJiraTicket(branch)}`
       open(url)
     })
 }
@@ -86,6 +86,12 @@ function getBranch() {
       resolve(stdout.trim())
     })
   })
+}
+
+function parseJiraTicket(branch) {
+  const result = /\w+-\d+/.exec(branch);
+  if (result == null) return branch;
+  return result[0];
 }
 
 function parseRemote(remote) {
