@@ -1,0 +1,32 @@
+{
+  "name": "dopen",
+  "version": "1.0.0",
+  "description": "Command line tool that lets you quickly open up to sites associated with dev workflows (Jira tickets, github repos, and branches)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hesto2/dopen.git"
+  },
+  "keywords": [
+    "chrome",
+    "internet",
+    "jira",
+    "github"
+  ],
+  "author": "hesto2",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hesto2/dopen/issues"
+  },
+  "homepage": "https://github.com/hesto2/dopen#readme",
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "open": "0.0.5"
+  },
+  "bin": {
+    "dopen": "./index.js"
+  }
+}
